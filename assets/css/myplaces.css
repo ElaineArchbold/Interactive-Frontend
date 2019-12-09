@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway|Satisfy&display=swap:100,200,300,400,500,600,700|Red+Hat+Display:100,200,300,400,500,600,700');
+
+/*-----------------------------------------------------------------NAVBAR*/
+
+.navbar {
+	margin-bottom: 0;
+	width: 100%;
+	border: 0;
+	position: fixed;
+	z-index: 9999;
+    padding: 0;
+}
+
+.nav-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	padding-left: 0;
+	padding-right: 0;
+}
+.navbar-brand {
+    padding-left: 4px;
+}
+
+.navbar-dark {
+	background-color: rgba(255,255,255,0.75);
+}
+
+.navbar .navbar-toggler {
+	border: 0;
+}
+
+.nav-item {
+	font-weight: 200;
+	font-family: 'Raleway', sans-serif;
+	color: #353436!important;
+	text-transform: uppercase;
+	padding: 5px;
+}
+
+.navbar-expand-sm .navbar-nav .nav-link {
+	color: rgba(0, 0, 0, .5);
+	color: #333333;
+}
+
+.hvr-sweep-to-bottom:before {
+	background: rgba(255, 255, 255, 0.25);
+}
+
+.navbar-expand-sm .navbar-nav .nav-link:hover {
+	color: rgba(0, 0, 0, .5);
+	color: #906c49;
+}
+
+#navbarNavDropdown .active a {
+	color: #906c49!important;
+}
+
+.dropdown-menu {
+	background-color: transparent;
+	border: none;
+	text-align: left;
+}
+
+.dropdown-item:hover {
+	color: #be2026;
+	background-color: #fafafa;
+	transition: all 0.5s ease-in-out;
+}
+
+/*--------------------------------------------MY PLACES*/
+.my-places {
+	border-radius: 0;
+	padding-top: 100px;
+	margin: 0;
+    background-color:#906c49;
+	min-height:1200px;
+}
+
+.my-places h2{
+    font-family: 'raleway', sans-serif;
+    color:#353436;
+    text-align: center;
+}
+
+.my-places p{
+    font-family: 'satisfy', sans-serif;
+    color:#353436;
+    text-align: center;
+}
+/*--------------------------------------------Map*/
+
+#map {
+   margin:50px;
+   height: 600px;
+   border-radius:15px;
+   border:solid 1px #333333
+
+ }
+
+/*-----------------------------------------------------------------FOOTER*/
+
+footer {
+	background-color: rgba(255,255,255,0.5);
+	position: fixed;
+	text-align: center;
+	width: 100%;
+	color: #906c49;
+	bottom: 0;
+    padding:0;  
+	height: auto;
+}
+
+.social-links li a i {
+	font-size: 30px;
+	text-align: center;
+	color: #906c49;
+	transition: all 0.35s ease-in-out;
+	-moz-transition: all 0.35s ease-in-out;
+	-webkit-transition: all 0.35s ease-in-out;
+	-o-transition: all 0.35s ease-in-out;
+}
+
+.social-links li a i:hover {
+	color: #353436;
+}
+
+.footer-details {
+	padding-top: 5px;
+ 
+}
+
+
+/*-----------------------------------------------------------------MEDIA QUERIES*/
+
+@media(min-width:320px) and (max-width:991px) {
+	.navbar-brand {
+		letter-spacing: 3px;
+	}
+}
+
+@media(min-width: 320px) and (max-width:991px) {
+	.social-links li a i {
+		line-height: 30px;
+		width: 30px;
+		height: 30px;
+		padding: 0px;
+		border-radius: 50%;
+		font-size: 20px;
+		line-height: 30px;
+	}
+}
+
+@media(min-width: 320px) and (max-width:991px) {
+	.footer-details {
+		padding-top: 2px;
+		padding-bottom: 2px;
+	}
+}
+
+@media(min-width: 320px) and (max-width:991px) {
+	footer {
+		line-height: 50px;
+		height: 50px;
+	}
+}
