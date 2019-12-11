@@ -79,85 +79,193 @@
 	margin: 0;
 }
 
-
-.main-container {
-	background-color: #f0f7fb;
-}
 .section-one {
 	background-image: url("../../assets/images/home.jpg");
-	min-height: 600px;
+	height: 400px;
 	background-attachment: fixed;
 	background-size: cover;
 	background-position: 50% 50%;
  
 }
 
-/*--------------------------------------------Map*/
-.map-search{
-    padding-top:20px;
-  background-color: rgba(255,255,255,0.5);
-  color: #906c49;
+
+/*-----------------------------------------------------------------SEARCH BAR*/
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
 }
+
+
+legend {
+  box-sizing: border-box;
+  color: #353436;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+
+}
+
+
+
+.searchbar {
+  min-height: 100vh;
+      justify-content: center;
+ 
+      align-items: center;
+  font-family: 'raleway', sans-serif;
+  color:#353436;
+  background-size: cover;
+  background-position: center center;
+  padding: 15px;
+  padding-top:100px;
+
+} 
+
+.searchbar form {
+  width: 100%;
+  max-width: 1190px;
+}
+
+.searchbar form legend {
+  font-size: 60px;
+  line-height: 1;
+  font-family: 'raleway', sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 400;
+  text-align: center;
+}
+
+.searchbar form .inner-form {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 16px;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.searchbar form .inner-form .input-field {
+  position: relative;
+  border-right: 1px solid #ddd;
+}
+
+.searchbar form .inner-form .input-field .icon-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  -ms-flex-align: center;
+      align-items: center;
+  z-index: 1;
+}
+
+
+.searchbar form .inner-form .input-field input {
+  height: 70px;
+  background: #fff;
+  border-radius: 0;
+  border: 0;
+  display: block;
+  width: 100%;
+  padding: 10px 20px 10px 45px;
+  font-size: 16px;
+  color: #555;
+  font-weight: 400;
+  font-family: 'raleway', sans-serif;
+}
+
+.searchbar form .inner-form .input-field input.placeholder {
+  color: #9a9a9a;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+
+.searchbar form .inner-form .input-field.first-wrap {
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+}
+
+.searchbar form .inner-form .input-field.second-wrap {
+ -ms-flex-positive: 1;
+      flex-grow: 1;
+}
+
+.searchbar form .inner-form .input-field.third-wrap .btn-search {
+  height: 70px;
+  width: 100%;
+  background: #b78a62;
+  white-space: nowrap;
+  border-radius: .5px;
+  font-size: 20px;
+  color: #fff;
+  transition: all .2s ease-out, color .2s ease-out;
+  border: 0;
+  cursor: pointer;
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+}
+
+.searchbar form .inner-form .input-field.third-wrap .btn-search:hover {
+  background: #af7d51;
+ 
+}
+
+
+
+/*--------------------------------------------Map*/
+
 #map {
-	min-height: 360px;
-	margin-bottom: 100px;
-	margin-top: 20px;
-	width: 60%;
-	margin-left: 20px;
+    min-height: 360px;
+    margin-bottom: 100px;
+    margin-top: 20px;
+    width: 100%;
+    background-color: transparent;
 }
 
 table {
 	font-size: 12px;
 }
 
-.hotel-search {
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-	background: #fff;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	margin-left: 50px;
-	display: flex;
-	left: 0;
-	top: 0;
-	width: 440px;
-	z-index: 1;
-}
-
 #listing {
 	position: absolute;
-	width: 30%;
-	height: 470px;
-	overflow: auto;
-	margin-top: 200px;
-	margin-bottom: 200px;
-	left: 442px;
-	top: 0px;
-	cursor: pointer;
-	overflow-x: hidden;
+    width: 100%;
+    min-height: 360px;
+    overflow: auto;
+    margin-bottom: 0;
+    margin-left:auto;
+    top: 0px;
+    cursor: pointer;
+    overflow-x: hidden;
 }
 
 #findhotels {
-	font-size: 20px;
+	font-size: 40px;
 	font-family: 'satisfy', sans-serif;
 
 }
 
 #locationField {
-	-webkit-box-flex: 1 1 190px;
 	font-family: 'raleway', sans-serif;
-	-ms-flex: 1 1 190px;
-	flex: 1 1 190px;
 	margin: 0 px;
 	font-size: 12px;
 }
 
 #controls {
-	-webkit-box-flex: 1 1 140px;
-	-ms-flex: 1 1 140px;
-	flex: 1 1 140px;
+	height:70px;
 	font-family: 'raleway', sans-serif;
+    border-radius: 0;
 }
 
 #autocomplete {
@@ -166,6 +274,7 @@ table {
 
 #country {
 	width: 50%;
+    height: 100%;
 }
 
 .placeIcon {
@@ -207,30 +316,33 @@ table {
 /*-----------------------------------------------------------------CONTACT PAGE*/
 
 .form-page {
-    background-image: url("../../assets/images/contact.png"); 
+    background-color:#a79f84;
     background-attachment: fixed;
-    min-height: 1000px;
 	background-size: cover;
 	background-position: 50% 50%;
+    margin-bottom:0;
+    padding-bottom:0;
 }
 
-.main-form {
-	padding-top: 100px;
-    padding-bottom: 100px;
+.col-12 .main-form{
+    padding:30px;
 }
 
-
-.main-form h3 {
+.main-form h2 {
 	color: #353436;
 	font-family: 'raleway', sans-serif;
 	text-transform: uppercase;
 	text-align: center;
+    font-weight: bolder;
+    padding-top:100px;
+    letter-spacing: 7px;
+
 }
 .main-form p {
 	color: #353436;
 	font-family: 'satisfy', sans-serif;
 	text-align: center;
-    font-size: 20px;
+    font-size: 30px;
 }
 .main-form button[type=submit] {
 	font-family: 'raleway', sans-serif;
@@ -271,9 +383,66 @@ table {
 	text-align: left;
 	font-size: 28px;
 	color: border: 1px solid #0d517e;
+}*/
+
+.main-form {
+    padding: 60px;
+    padding-top:100px;
+    border-radius: 5px;
+    background-color: #fafafa;
+}
+/*-----------------------------------------------------------------FIND US*/
+
+.find-me {
+
+    width: 100%;
+    background-color: #fafafa;
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: 50% 50%;
+    margin-top: 0;
+    padding: 0;
+    height: auto;
+    margin-bottom: 100px;
 }
 
+.find-me h1 {
+    color: #be2026;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: 'raleway', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+}
 
+.find-me h3 {
+    color: #be2026;
+    font-family: 'raleway', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.find-me p {
+    color: #111111;
+    font-family: 'satisfy', sans-serif;
+    text-align: center;
+    text-decoration: none;
+}
+
+.find-me-container {
+    padding-top: 10px;
+    background-color: #fafafa;
+    opacity: .9;
+    width: 100%;
+}
+
+.iframe-container {
+    width: 100%;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
 /*-----------------------------------------------------------------FOOTER*/
 
 footer {

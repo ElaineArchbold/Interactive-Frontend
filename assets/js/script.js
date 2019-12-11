@@ -264,4 +264,5 @@ var map, places, infoWindow;
         } else {
           document.getElementById('iw-website-row').style.display = 'none';
         }
-      }
+      };
+
