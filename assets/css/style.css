@@ -313,8 +313,81 @@ table {
 }
 
 
-/*-----------------------------------------------------------------CONTACT PAGE*/
 
+/*--------------------------------------------MY PLACES*/
+
+.my-places {
+    padding-top: 150px;
+    margin: 0;
+    background-color: #fafafa;
+    min-height: 1200px;
+    width: 100%;
+}
+
+.my-places h2 {
+    font-family: 'raleway', sans-serif;
+    color: #be2026;
+    text-align: center;
+}
+
+.my-places p {
+    font-family: 'satisfy', sans-serif;
+    color: #353436;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.map-area {
+    padding: 20px;
+}
+
+.tab-content {
+    overflow: auto;
+    height: 600px;
+}
+
+#mapdiv {
+    width: 60%;
+    height: 700px;
+    float: left;
+    margin-left:10px;
+}
+
+.map-list {
+    float: right;
+}
+
+.section-map-list {
+    width: 30%;
+    float: right;
+    margin: 0;
+    padding: 10px;
+    background-color: #fafafa;
+}
+
+.tab-content {
+    font-family: 'raleway', sans-serif;
+}
+
+input {
+    margin: 9px;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.nav-tabs a {
+    font-family: 'raleway', sans-serif;
+    text-transform: uppercase;
+    color: #be2026;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.nav {
+    display: block;
+}
+/*-----------------------------------------------------------------CONTACT PAGE*/
 .form-page {
     background-color:#a79f84;
     background-attachment: fixed;
@@ -328,7 +401,7 @@ table {
     padding:30px;
 }
 
-.main-form h2 {
+.main-form h3 {
 	color: #353436;
 	font-family: 'raleway', sans-serif;
 	text-transform: uppercase;

@@ -9,10 +9,11 @@
 
 ## Features
 ### Existing Features
+Google Map & searchbar using Google Map API & a seperate search bar
+Interactive map on my places page storing places visited in a cookie
 
 
 
-### Features Left to Implement
 
 
 
@@ -23,12 +24,14 @@
 4. Javascript
 5. Google Map API
 6. EmailJS
-7. Photoshop
-8. Illustrator
+7. JQuery
+8. Photoshop
+9. Illustrator
 
 
 ## Testing
-
+Jasmine
+Dev Tools....
 
 
 ## Deployment

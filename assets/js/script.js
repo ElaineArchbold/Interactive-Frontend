@@ -265,4 +265,3 @@ var map, places, infoWindow;
           document.getElementById('iw-website-row').style.display = 'none';
         }
       };
-
