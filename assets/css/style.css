@@ -106,8 +106,6 @@ legend {
 
 }
 
-
-
 .searchbar {
   min-height: 100vh;
       justify-content: center;
@@ -222,8 +220,6 @@ legend {
  
 }
 
-
-
 /*--------------------------------------------Map*/
 
 #map {
@@ -237,18 +233,17 @@ legend {
 table {
 	font-size: 12px;
 }
-
 #listing {
-	position: absolute;
-    width: 100%;
-    min-height: 360px;
-    overflow: auto;
+    position: absolute;
+    width: 30%;
+    min-height: 200px;
+    overflow: hidden;
     margin-bottom: 0;
-    margin-left:auto;
-    top: 0px;
+    margin-left: auto;
+    margin-top: 20px;
     cursor: pointer;
     overflow-x: hidden;
-}
+    }
 
 #findhotels {
 	font-size: 40px;
@@ -292,6 +287,8 @@ table {
 #resultsTable {
 	border-collapse: collapse;
 	width: 400px;
+    height: 360px;
+    padding-right:10px;
 }
 
 #rating {
