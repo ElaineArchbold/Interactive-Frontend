@@ -8,7 +8,7 @@
 	border: 0;
 	position: fixed;
 	z-index: 9999;
-    padding: 0;
+	padding: 0;
 }
 
 .nav-container {
@@ -19,12 +19,13 @@
 	padding-left: 0;
 	padding-right: 0;
 }
+
 .navbar-brand {
-    padding-left: 4px;
+	padding-left: 4px;
 }
 
 .navbar-dark {
-	background-color: rgba(255,255,255,0.75);
+	background-color: rgba(255, 255, 255, 0.75);
 }
 
 .navbar .navbar-toggler {
@@ -85,182 +86,117 @@
 	background-attachment: fixed;
 	background-size: cover;
 	background-position: 50% 50%;
- 
 }
 
 
 /*-----------------------------------------------------------------SEARCH BAR*/
 
-fieldset {
-  padding: 0.35em 0.75em 0.625em;
+
+
+.searchbar h1 {
+    text-align: left;
+	color: black;
+	max-width: 100%;
+	padding: 0;
+	font-family: 'raleway', sans-serif;
 }
 
-
-legend {
-  box-sizing: border-box;
-  color: #353436;
-  display: table;
-  max-width: 100%;
-  padding: 0;
-  white-space: normal;
-
-}
 
 .searchbar {
-  min-height: 100vh;
-      justify-content: center;
- 
-      align-items: center;
-  font-family: 'raleway', sans-serif;
-  color:#353436;
-  background-size: cover;
-  background-position: center center;
-  padding: 15px;
-  padding-top:100px;
-
-} 
+	min-height: 100vh;
+	justify-content: center;
+	align-items: center;
+	background-size: cover;
+	background-position: center center;
+	padding: 15px;
+	padding-top: 100px;
+}
 
 .searchbar form {
-  width: 100%;
-  max-width: 1190px;
+	width: 100%;
+	
 }
-
-.searchbar form legend {
-  font-size: 60px;
-  line-height: 1;
-  font-family: 'raleway', sans-serif;
-  text-transform: uppercase;
-  color: #fff;
-  font-weight: 400;
-  text-align: center;
-}
-
 .searchbar form .inner-form {
-  background: rgba(0, 0, 0, 0.5);
-  padding: 16px;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
-  -ms-flex-align: center;
-      align-items: center;
+	background: rgba(0, 0, 0, 0.5);
+	padding: 16px;
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+   
 }
 
 .searchbar form .inner-form .input-field {
-  position: relative;
-  border-right: 1px solid #ddd;
+	 border-radius: 5px;
+    margin:2px;
+    width:30%
+	
 }
-
-.searchbar form .inner-form .input-field .icon-wrap {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 40px;
-  height: 100%;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: end;
-      justify-content: flex-end;
-  -ms-flex-align: center;
-      align-items: center;
-  z-index: 1;
-}
-
 
 .searchbar form .inner-form .input-field input {
-  height: 70px;
-  background: #fff;
-  border-radius: 0;
-  border: 0;
-  display: block;
-  width: 100%;
-  padding: 10px 20px 10px 45px;
-  font-size: 16px;
-  color: #555;
-  font-weight: 400;
-  font-family: 'raleway', sans-serif;
+	height: 70px;
+	background: #fafafa;
+	border-radius: 0;
+	border: 0;
+	display: block;
+	width: 100%;
+	padding: 10px 20px 10px 45px;
+	font-size: 16px;
+	color: #555;
+	font-weight: 400;
+	font-family: 'raleway', sans-serif;
 }
 
 .searchbar form .inner-form .input-field input.placeholder {
-  color: #9a9a9a;
-  font-size: 16px;
-  font-weight: 400;
-  text-transform: uppercase;
+	color: #9a9a9a;
+	font-size: 16px;
+	font-weight: 400;
+	text-transform: uppercase;
 }
-
 
 .searchbar form .inner-form .input-field.first-wrap {
-  -ms-flex-positive: 1;
-      flex-grow: 1;
+	flex-grow: 1;
 }
 
-.searchbar form .inner-form .input-field.second-wrap {
- -ms-flex-positive: 1;
-      flex-grow: 1;
-}
-
-.searchbar form .inner-form .input-field.third-wrap .btn-search {
-  height: 70px;
-  width: 100%;
-  background: #b78a62;
-  white-space: nowrap;
-  border-radius: .5px;
-  font-size: 20px;
-  color: #fff;
-  transition: all .2s ease-out, color .2s ease-out;
-  border: 0;
-  cursor: pointer;
-  font-weight: 400;
-  font-family: 'Poppins', sans-serif;
-}
-
-.searchbar form .inner-form .input-field.third-wrap .btn-search:hover {
-  background: #af7d51;
- 
-}
 
 /*--------------------------------------------Map*/
 
 #map {
-    min-height: 360px;
-    margin-bottom: 100px;
-    margin-top: 20px;
-    width: 100%;
-    background-color: transparent;
+	min-height: 360px;
+	margin-bottom: 100px;
+	margin-top: 20px;
+	width: 100%;
+	background-color: transparent;
 }
 
 table {
 	font-size: 12px;
 }
+
 #listing {
-    position: absolute;
-    width: 30%;
-    min-height: 200px;
-    overflow: hidden;
-    margin-bottom: 0;
-    margin-left: auto;
-    margin-top: 20px;
-    cursor: pointer;
-    overflow-x: hidden;
-    }
-
-#findhotels {
-	font-size: 40px;
-	font-family: 'satisfy', sans-serif;
-
+	position: absolute;
+	width: 30%;
+	min-height: 200px;
+	overflow: hidden;
+	margin-bottom: 0;
+	margin-left: auto;
+	margin-top: 20px;
+	cursor: pointer;
+	overflow-x: hidden;
 }
+
 
 #locationField {
 	font-family: 'raleway', sans-serif;
-	margin: 0 px;
+	margin: 0;
 	font-size: 12px;
 }
 
 #controls {
-	height:70px;
+	height: 70px;
 	font-family: 'raleway', sans-serif;
-    border-radius: 0;
+    width:100%;
+
 }
 
 #autocomplete {
@@ -269,7 +205,7 @@ table {
 
 #country {
 	width: 50%;
-    height: 100%;
+	height: 100%;
 }
 
 .placeIcon {
@@ -281,14 +217,15 @@ table {
 .hotelIcon {
 	width: 24px;
 	height: 24px;
-
 }
 
 #resultsTable {
-	border-collapse: collapse;
+	display: block;
+    border-collapse: collapse;
 	width: 400px;
-    height: 360px;
-    padding-right:10px;
+	height: 360px;
+	padding-right: 10px;
+    overflow-y:scroll;
 }
 
 #rating {
@@ -310,92 +247,94 @@ table {
 }
 
 
-
 /*--------------------------------------------MY PLACES*/
 
 .my-places {
-    padding-top: 150px;
-    margin: 0;
-    background-color: #fafafa;
-    min-height: 1200px;
-    width: 100%;
+	padding-top: 150px;
+	margin: 0;
+	background-color: #fafafa;
+	min-height: 1200px;
+	width: 100%;
 }
 
 .my-places h2 {
-    font-family: 'raleway', sans-serif;
-    color: #be2026;
-    text-align: center;
+	font-family: 'raleway', sans-serif;
+	color: #be2026;
+	text-align: center;
 }
 
 .my-places p {
-    font-family: 'satisfy', sans-serif;
-    color: #353436;
-    text-align: center;
-    letter-spacing: 3px;
+	font-family: 'satisfy', sans-serif;
+	color: #353436;
+	text-align: center;
+	letter-spacing: 3px;
 }
 
 .map-area {
-    padding: 20px;
+	padding: 20px;
 }
 
 .tab-content {
-    overflow: auto;
-    height: 600px;
+	overflow: auto;
+	height: 600px;
 }
 
 #mapdiv {
-    width: 60%;
-    height: 700px;
-    float: left;
-    margin-left:10px;
+	width: 60%;
+	height: 700px;
+	float: left;
+	margin-left: 10px;
 }
 
 .map-list {
-    float: right;
+	float: right;
 }
 
 .section-map-list {
-    width: 30%;
-    float: right;
-    margin: 0;
-    padding: 10px;
-    background-color: #fafafa;
+	width: 30%;
+	float: right;
+	margin: 0;
+	padding: 10px;
+	background-color: #fafafa;
 }
 
 .tab-content {
-    font-family: 'raleway', sans-serif;
+	font-family: 'raleway', sans-serif;
 }
 
 input {
-    margin: 9px;
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
+	margin: 9px;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
 }
 
 .nav-tabs a {
-    font-family: 'raleway', sans-serif;
-    text-transform: uppercase;
-    color: #be2026;
-    text-decoration: none;
-    background-color: transparent;
+	font-family: 'raleway', sans-serif;
+	text-transform: uppercase;
+	color: #be2026;
+	text-decoration: none;
+	background-color: transparent;
 }
 
 .nav {
-    display: block;
-}
-/*-----------------------------------------------------------------CONTACT PAGE*/
-.form-page {
-    background-color:#a79f84;
-    background-attachment: fixed;
-	background-size: cover;
-	background-position: 50% 50%;
-    margin-bottom:0;
-    padding-bottom:0;
+	display: block;
 }
 
-.col-12 .main-form{
-    padding:30px;
+
+/*-----------------------------------------------------------------CONTACT PAGE*/
+
+.form-page {
+	background-color: #a79f84;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: 50% 50%;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+.col-12 .main-form {
+	padding: 30px;
 }
 
 .main-form h3 {
@@ -403,17 +342,18 @@ input {
 	font-family: 'raleway', sans-serif;
 	text-transform: uppercase;
 	text-align: center;
-    font-weight: bolder;
-    padding-top:100px;
-    letter-spacing: 7px;
-
+	font-weight: bolder;
+	padding-top: 100px;
+	letter-spacing: 7px;
 }
+
 .main-form p {
 	color: #353436;
 	font-family: 'satisfy', sans-serif;
 	text-align: center;
-    font-size: 30px;
+	font-size: 30px;
 }
+
 .main-form button[type=submit] {
 	font-family: 'raleway', sans-serif;
 	text-transform: uppercase;
@@ -452,77 +392,78 @@ input {
 	text-transform: uppercase;
 	text-align: left;
 	font-size: 28px;
-	color: border: 1px solid #0d517e;
-}*/
+	border: 1px solid #0d517e;
+}
 
 .main-form {
-    padding: 60px;
-    padding-top:100px;
-    border-radius: 5px;
-    background-color: #fafafa;
+	padding: 60px;
+	padding-top: 100px;
+	border-radius: 5px;
+	background-color: #fafafa;
 }
+
+
 /*-----------------------------------------------------------------FIND US*/
 
 .find-me {
-
-    width: 100%;
-    background-color: #fafafa;
-    background-attachment: scroll;
-    background-size: cover;
-    background-position: 50% 50%;
-    margin-top: 0;
-    padding: 0;
-    height: auto;
-    margin-bottom: 100px;
+	width: 100%;
+	background-color: #fafafa;
+	background-attachment: scroll;
+	background-size: cover;
+	background-position: 50% 50%;
+	margin-top: 0;
+	padding: 0;
+	height: auto;
+	margin-bottom: 100px;
 }
 
 .find-me h1 {
-    color: #be2026;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    font-family: 'raleway', sans-serif;
-    text-transform: uppercase;
-    text-align: center;
+	color: #be2026;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-family: 'raleway', sans-serif;
+	text-transform: uppercase;
+	text-align: center;
 }
 
 .find-me h3 {
-    color: #be2026;
-    font-family: 'raleway', sans-serif;
-    text-transform: uppercase;
-    text-align: center;
-    padding-top: 20px;
+	color: #be2026;
+	font-family: 'raleway', sans-serif;
+	text-transform: uppercase;
+	text-align: center;
+	padding-top: 20px;
 }
 
 .find-me p {
-    color: #111111;
-    font-family: 'satisfy', sans-serif;
-    text-align: center;
-    text-decoration: none;
+	color: #111111;
+	font-family: 'satisfy', sans-serif;
+	text-align: center;
+	text-decoration: none;
 }
 
 .find-me-container {
-    padding-top: 10px;
-    background-color: #fafafa;
-    opacity: .9;
-    width: 100%;
+	padding-top: 10px;
+	background-color: #fafafa;
+	opacity: .9;
+	width: 100%;
 }
 
 .iframe-container {
-    width: 100%;
-    padding-top: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+	padding-top: 10px;
+	width: 100%;
 }
+
+
 /*-----------------------------------------------------------------FOOTER*/
 
 footer {
-	background-color: rgba(255,255,255,0.5);
+	background-color: rgba(255, 255, 255, 0.5);
 	position: fixed;
 	text-align: center;
 	width: 100%;
 	color: #906c49;
 	bottom: 0;
-    padding:0;  
+	padding: 0;
 	height: auto;
 }
 
@@ -542,7 +483,6 @@ footer {
 
 .footer-details {
 	padding-top: 5px;
- 
 }
 
 
