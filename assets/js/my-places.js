@@ -1,6 +1,61 @@
 /*MY PLACCES PAGE MAP*/
+var mapCookieValue;
+function inCookie(countryCode){
+    var gotCode = false;
+    if(mapCookieValue!=null){
+        if(mapCookieValue.indexOf(",")!=-1){
+            var cookieCountryCodes = mapCookieValue.split(",");
+            
+            for(var i=0;i<cookieCountryCodes.length;i++){
+                if(cookieCountryCodes[i]==countryCode){
+                    gotCode = true;
+                }
+            }
+        }else{
+            gotCode = (mapCookieValue==countryCode) ? true : false;
+        }
+    }
+    return gotCode;
+}
+function getMyMapCookieValues(){
+    var myMapCookie = "mapSelections=";
+    var allCookiesAsArray = document.cookie.split(';');
+    for(var i=0;i < allCookiesAsArray.length;i++) {
+        if(allCookiesAsArray[i].indexOf(myMapCookie)!=-1){
+            mapCookieValue = allCookiesAsArray[i].substring(allCookiesAsArray[i].indexOf("=")+1 , allCookiesAsArray[i].length);   
+        }
+    }
+    return mapCookieValue;
+}
+function createCookie(value){
+    var date = new Date();
+    date.setTime(date.getTime()+(30*24*60*60*1000));
+    var expires = "; expires="+date.toGMTString();
+    document.cookie = "mapSelections="+value+expires+"; path=/";
+}
+function addToCookie(checkbox){
+    var val = checkbox.prop("value");
+    var cookieValue = getMyMapCookieValues();
+    if(cookieValue==null||cookieValue.trim()==""){
+        cookieValue=val
+    }else{
+        cookieValue = cookieValue + "," + val;
+    }
+    createCookie(cookieValue);
+}
+function removeFromCookie(){
+
+}
 
 jQuery(document).ready(function () {
+
+    if (document.cookie.indexOf("mapSelections") < 0) {
+     createCookie("");
+
+    }else{
+        getMyMapCookieValues();
+    }
+
     var lists = {
         africa: ["AO", "BF", "BI", "BJ", "BW", "CD", "CF", "CG", "CI", "CM", "DJ", "DZ", "EG", "ER", "ET", "GA", "GH", "GM", "GN", "GQ", "GW", "KE", "LR", "LS", "LY", "MA", "MU", "MG", "ML", "MR", "MW", "MZ", "NA", "NE", "NG", "RE", "RW", "SD", "SL", "SN", "SO", "SS", "SZ", "TD", "TG", "TN", "TZ", "UG", "ZA", "ZM", "ZW", "EH", "KM", "GO", "JU", "SH", "ST", "YT", "BV", "CV", "SC"],
         asia: ["AE", "AF", "BD", "BN", "IO", "BT", "CN", "ID", "IL", "IN", "IQ", "IR", "JO", "JP", "KG", "KH", "KP", "KR", "KW", "KZ", "LA", "LB", "LK", "MO", "MM", "MN", "MY", "NP", "OM", "PH", "PK", "PS", "QA", "SA", "SY", "TH", "TJ", "TL", "TM", "TW", "UZ", "VN", "YE", "HK", "MV", "BH", "SG"],
@@ -80,11 +135,22 @@ jQuery(document).ready(function () {
                 var col = jQuery("<td>").appendTo(row);
                 var div = jQuery("<div>").appendTo(col).addClass("checkbox");
                 var label = jQuery("<label>").appendTo(div).text(names[CC]);
-                var checkbox = jQuery("<input>").attr({
-                    type: "checkbox",
-                    name: "map",
-                    value: this
-                }).prependTo(label);
+                var checkbox;
+                if(inCookie(this)){
+                    checkbox = jQuery("<input>").attr({
+                        type: "checkbox",
+                        name: "map",
+                        value: this,
+                        checked: 'checked'
+                    }).prependTo(label);
+                    map.updateSelection();
+                }else{
+                    checkbox = jQuery("<input>").attr({
+                        type: "checkbox",
+                        name: "map",
+                        value: this
+                    }).prependTo(label);
+                }
 
                 row.on("click", function (e) {
                     e.stopImmediatePropagation();
@@ -93,6 +159,11 @@ jQuery(document).ready(function () {
                 });
 
                 checkbox.on("click", function (e) {
+                    if(checkbox.prop("checked")){
+                        addToCookie(checkbox);
+                    }else{
+                        removeFromCookie(checkbox);
+                    }
                     e.stopImmediatePropagation();
                     map.updateSelection();
                 });
