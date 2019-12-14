@@ -39,6 +39,7 @@ Dev Tools....
 
 ## Credits
 ### Content
+Cookie tutorial from https://www.youtube.com/watch?v=Sl0K7gCEIkY
 
 
 ### Media

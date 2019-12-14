@@ -9,7 +9,7 @@ function inCookie(countryCode){
             for(var i=0;i<cookieCountryCodes.length;i++){
                 if(cookieCountryCodes[i]==countryCode){
                     gotCode = true;
-                }
+                } 
             }
         }else{
             gotCode = (mapCookieValue==countryCode) ? true : false;
@@ -43,7 +43,7 @@ function addToCookie(checkbox){
     }
     createCookie(cookieValue);
 }
-function removeFromCookie(){
+function removeFromCookie(checkbox){
 
 }
 
@@ -124,6 +124,60 @@ jQuery(document).ready(function () {
             names[this.id] = this.title.replace(/x28/g, '(').replace(/x29/g, ')').replace(/x2C/g, ',');
     });
 
+/*SET AND STORE COOKIES FOR MY-PLACES MAP*/
+    /*add cookie for areas selected on list*/
+jQuery(".section-map-list").each(function () {
+        jQuery.map(lists, function (list, name) {
+            var tbody = jQuery("#" + name).find("tbody");
+
+            jQuery(list).each(function () {
+                var CC = String(this);
+                var row = jQuery("<tr>").appendTo(tbody);
+                var col = jQuery("<td>").appendTo(row);
+                var div = jQuery("<div>").appendTo(col).addClass("checkbox");
+                var label = jQuery("<label>").appendTo(div).text(names[CC]);
+                var checkbox;
+                if(inCookie(this)){
+                    checkbox = jQuery("<input>").attr({
+                        type: "checkbox",
+                        name: "map",
+                        value: this,
+                        checked: 'checked',
+
+                    }).prependTo(label);
+                    map.updateSelection();
+                }else{
+                    checkbox = jQuery("<input>").attr({
+                        type: "checkbox",
+                        name: "map",
+                        value: this
+                    }).prependTo(label);
+                }
+
+
+
+
+
+                row.on("click", function (e) {
+                    e.stopImmediatePropagation();
+                    checkbox.prop("checked", !checkbox.prop("checked"));
+                    map.updateSelection();
+                });
+
+                checkbox.on("click", function (e) {
+                    if(checkbox.prop("checked")){
+                        addToCookie(checkbox);
+                    }else{
+                        removeFromCookie(checkbox);
+                    }
+                    e.stopImmediatePropagation();
+                    map.updateSelection();
+                });
+            });
+        });
+    });
+
+    
 
     jQuery(".section-map-list").each(function () {
         jQuery.map(lists, function (list, name) {
@@ -141,7 +195,8 @@ jQuery(document).ready(function () {
                         type: "checkbox",
                         name: "map",
                         value: this,
-                        checked: 'checked'
+                        checked: 'checked',
+
                     }).prependTo(label);
                     map.updateSelection();
                 }else{
@@ -174,4 +229,4 @@ jQuery(document).ready(function () {
 });
 
 
-/*SET AND STORE COOKIES FOR MY-PLACES MAP*/
+

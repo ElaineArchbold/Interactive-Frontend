@@ -3,519 +3,650 @@
 /*-----------------------------------------------------------------NAVBAR*/
 
 .navbar {
-	margin-bottom: 0;
-	width: 100%;
-	border: 0;
-	position: fixed;
-	z-index: 9999;
-	padding: 0;
+    margin-bottom: 0;
+    width: 100%;
+    border: 0;
+    position: fixed;
+    z-index: 9999;
+    padding: 0;
 }
 
 .nav-container {
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 1;
-	padding-left: 0;
-	padding-right: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .navbar-brand {
-	padding-left: 4px;
+    padding-left: 4px;
 }
 
 .navbar-dark {
-	background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 0.75);
 }
 
 .navbar .navbar-toggler {
-	border: 0;
+    border: 0;
 }
 
 .nav-item {
-	font-weight: 200;
-	font-family: 'Raleway', sans-serif;
-	color: #353436!important;
-	text-transform: uppercase;
-	padding: 5px;
+    font-weight: 200;
+    font-family: 'Raleway', sans-serif;
+    color: #353436!important;
+    text-transform: uppercase;
+    padding: 5px;
 }
 
 .navbar-expand-sm .navbar-nav .nav-link {
-	color: rgba(0, 0, 0, .5);
-	color: #333333;
+    color: rgba(0, 0, 0, .5);
+    color: #333333;
 }
 
 .hvr-sweep-to-bottom:before {
-	background: rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.25);
 }
 
 .navbar-expand-sm .navbar-nav .nav-link:hover {
-	color: rgba(0, 0, 0, .5);
-	color: #906c49;
+    color: rgba(0, 0, 0, .5);
+    color: #906c49;
 }
 
 #navbarNavDropdown .active a {
-	color: #906c49!important;
+    color: #906c49!important;
 }
 
 .dropdown-menu {
-	background-color: transparent;
-	border: none;
-	text-align: left;
+    background-color: transparent;
+    border: none;
+    text-align: left;
 }
 
 .dropdown-item:hover {
-	color: #be2026;
-	background-color: #fafafa;
-	transition: all 0.5s ease-in-out;
+    color: #be2026;
+    background-color: #fafafa;
+    transition: all 0.5s ease-in-out;
 }
 
+.navbar-collapse {
+    padding-left: 5px;
+}
 
 /*-----------------------------------------------------------------HOME PAGE*/
 
 .jumbotron {
-	margin: 0;
-	border-radius: 0;
-	padding: 0;
-	margin: 0;
+    margin: 0;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
 }
 
 .section-one {
-	background-image: url("../../assets/images/home.jpg");
-	height: 400px;
-	background-attachment: fixed;
-	background-size: cover;
-	background-position: 50% 50%;
+    background-image: url("../../assets/images/contact.png");
+    height: 400px;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 50% 50%;
 }
 
 
 /*-----------------------------------------------------------------SEARCH BAR*/
 
-
-
-.searchbar h1 {
-    text-align: left;
-	color: black;
-	max-width: 100%;
-	padding: 0;
-	font-family: 'raleway', sans-serif;
+.header h1 {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    font-family: 'raleway', sans-serif;
+    color: black;
+    line-height: 40px;
+    margin-top: 100px;
 }
 
 
 .searchbar {
-	min-height: 100vh;
-	justify-content: center;
-	align-items: center;
-	background-size: cover;
-	background-position: center center;
-	padding: 15px;
-	padding-top: 100px;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center center;
+    padding: 15px;
+    padding-top: 100px;
 }
 
 .searchbar form {
-	width: 100%;
-	
+    width: 100%;
+
 }
+
 .searchbar form .inner-form {
-	background: rgba(0, 0, 0, 0.5);
-	padding: 16px;
-	display: flex;
-	width: 100%;
-	justify-content: space-between;
-	align-items: center;
-   
+    background: rgba(0, 0, 0, 0.5);
+    padding: 16px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
 }
 
 .searchbar form .inner-form .input-field {
-	 border-radius: 5px;
-    margin:2px;
-    width:30%
-	
+    height: 70px;
+    margin: 2px;
+    width: 100%;
+    background: #fafafa;
+    margin: 9px;
+    font-family: 'raleway', sans-serif;
+    color: grey;
+
 }
 
-.searchbar form .inner-form .input-field input {
-	height: 70px;
-	background: #fafafa;
-	border-radius: 0;
-	border: 0;
-	display: block;
-	width: 100%;
-	padding: 10px 20px 10px 45px;
-	font-size: 16px;
-	color: #555;
-	font-weight: 400;
-	font-family: 'raleway', sans-serif;
+.input-field-one {
+    height: 70px;
+    margin: 2px;
+    width: 70%;
+    background: #fafafa;
+    margin: 9px;
+    font-family: 'raleway', sans-serif;
+    color: grey;
+    padding-top: 12px;
+    border-radius: 5px;
+
 }
 
-.searchbar form .inner-form .input-field input.placeholder {
-	color: #9a9a9a;
-	font-size: 16px;
-	font-weight: 400;
-	text-transform: uppercase;
+input {
+    margin: 9px;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    border: none;
+    background-color: #fafafa;
 }
 
-.searchbar form .inner-form .input-field.first-wrap {
-	flex-grow: 1;
+.input-field-two {
+    height: 70px;
+    margin: 2px;
+    width: 30%;
+    background: #fafafa;
+    margin: 9px;
+    font-family: 'raleway', sans-serif;
+    color: grey;
+    border-radius: 5px;
 }
-
 
 /*--------------------------------------------Map*/
 
 #map {
-	min-height: 360px;
-	margin-bottom: 100px;
-	margin-top: 20px;
-	width: 100%;
-	background-color: transparent;
+    min-height: 500px;
+    margin-bottom: 100px;
+    margin-top: 20px;
+    width: 100%;
+    background-color: transparent;
 }
 
 table {
-	font-size: 12px;
+    font-size: 12px;
 }
 
 #listing {
-	position: absolute;
-	width: 30%;
-	min-height: 200px;
-	overflow: hidden;
-	margin-bottom: 0;
-	margin-left: auto;
-	margin-top: 20px;
-	cursor: pointer;
-	overflow-x: hidden;
+    position: absolute;
+    width: 30%;
+    min-height: 200px;
+    overflow: hidden;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-top: 20px;
+    cursor: pointer;
+    overflow-x: hidden;
 }
 
 
 #locationField {
-	font-family: 'raleway', sans-serif;
-	margin: 0;
-	font-size: 12px;
+    font-family: 'raleway', sans-serif;
+
 }
 
 #controls {
-	height: 70px;
-	font-family: 'raleway', sans-serif;
-    width:100%;
+    height: 70px;
 
 }
 
 #autocomplete {
-	width: 100%;
+    width: 90%;
 }
 
 #country {
-	width: 50%;
-	height: 100%;
+    height: 100%;
+    font-family: 'raleway', sans-serif;
+    color: grey;
+    margin-left: 9px;
+    border: none;
+    background-color: #fafafa;
+    width: 100%;
+    border-radius: 5px;
 }
 
 .placeIcon {
-	width: 20px;
-	height: 34px;
-	margin: 4px;
+    width: 20px;
+    height: 34px;
+    margin: 4px;
 }
 
 .hotelIcon {
-	width: 24px;
-	height: 24px;
+    width: 24px;
+    height: 24px;
 }
 
 #resultsTable {
-	display: block;
+    display: block;
     border-collapse: collapse;
-	width: 400px;
-	height: 360px;
-	padding-right: 10px;
-    overflow-y:scroll;
+    width: 400px;
+    height: 500px;
+    padding-right: 10px;
+    overflow-y: scroll;
 }
 
 #rating {
-	font-size: 13px;
-	font-family: Arial Unicode MS;
+    font-size: 13px;
+    font-family: Arial Unicode MS;
 }
 
 .iw_table_row {
-	height: 18px;
+    height: 18px;
 }
 
 .iw_attribute_name {
-	font-weight: bold;
-	text-align: right;
+    font-weight: bold;
+    text-align: right;
 }
 
 .iw_table_icon {
-	text-align: right;
+    text-align: right;
 }
 
 
 /*--------------------------------------------MY PLACES*/
 
 .my-places {
-	padding-top: 150px;
-	margin: 0;
-	background-color: #fafafa;
-	min-height: 1200px;
-	width: 100%;
+    padding-top: 150px;
+    margin: 0;
+    background-color: #fafafa;
+    min-height: 1200px;
+    width: 100%;
 }
 
 .my-places h2 {
-	font-family: 'raleway', sans-serif;
-	color: #be2026;
-	text-align: center;
+    padding-top: 20px;
+    font-family: 'raleway', sans-serif;
+    color: #be2026;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    font-weight: bolder;
 }
 
 .my-places p {
-	font-family: 'satisfy', sans-serif;
-	color: #353436;
-	text-align: center;
-	letter-spacing: 3px;
+    font-family: 'satisfy', sans-serif;
+    color: #353436;
+    text-align: center;
+    font-size: 30px;
+
 }
 
 .map-area {
-	padding: 20px;
+    padding: 20px;
 }
 
 .tab-content {
-	overflow: auto;
-	height: 600px;
+    overflow: auto;
+    height: 600px;
 }
 
 #mapdiv {
-	width: 60%;
-	height: 700px;
-	float: left;
-	margin-left: 10px;
+    width: 60%;
+    height: 700px;
+    float: left;
+    padding-left: 20px;
 }
 
 .map-list {
-	float: right;
+    float: right;
 }
 
 .section-map-list {
-	width: 30%;
-	float: right;
-	margin: 0;
-	padding: 10px;
-	background-color: #fafafa;
+    width: 35%;
+    float: right;
+    padding: 0;
+    background-color: #fafafa;
+    margin-left: 23px;
 }
 
 .tab-content {
-	font-family: 'raleway', sans-serif;
+    font-family: 'raleway', sans-serif;
+    height: 720px;
 }
 
-input {
-	margin: 9px;
-	font-family: inherit;
-	font-size: inherit;
-	line-height: inherit;
-}
+/*input {
+    margin: 9px;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}*/
 
 .nav-tabs a {
-	font-family: 'raleway', sans-serif;
-	text-transform: uppercase;
-	color: #be2026;
-	text-decoration: none;
-	background-color: transparent;
+    font-family: 'raleway', sans-serif;
+    text-transform: uppercase;
+    color: #be2026;
+    text-decoration: none;
+    background-color: transparent;
 }
 
 .nav {
-	display: block;
+    display: block;
 }
 
+.directions h4 {
+    font-family: 'raleway', sans-serif;
+    color: lightgray;
+    font-weight: lighter;
+    font-size: 1vw;
+    text-align: center;
+}
 
 /*-----------------------------------------------------------------CONTACT PAGE*/
 
 .form-page {
-	background-color: #a79f84;
-	background-attachment: fixed;
-	background-size: cover;
-	background-position: 50% 50%;
-	margin-bottom: 0;
-	padding-bottom: 0;
+    background-color: #a79f84;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 50% 50%;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
-.col-12 .main-form {
-	padding: 30px;
+.main-form .col-12 {
+    padding-left: 0;
+    padding-right: 9px;
 }
 
 .main-form h3 {
-	color: #353436;
-	font-family: 'raleway', sans-serif;
-	text-transform: uppercase;
-	text-align: center;
-	font-weight: bolder;
-	padding-top: 100px;
-	letter-spacing: 7px;
+    color: #353436;
+    font-family: 'raleway', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bolder;
+    padding-top: 60px;
+    letter-spacing: 7px;
 }
 
 .main-form p {
-	color: #353436;
-	font-family: 'satisfy', sans-serif;
-	text-align: center;
-	font-size: 30px;
+    color: #353436;
+    font-family: 'satisfy', sans-serif;
+    text-align: center;
+    font-size: 30px;
 }
 
 .main-form button[type=submit] {
-	font-family: 'raleway', sans-serif;
-	text-transform: uppercase;
-	margin-top: 15px;
-	margin-bottom: 20px;
-	color: #fafafa;
-	background-color: #353436;
-	font-size: 28px;
-	padding: 12px 20px;
-	border: none;
-	border-radius: 4px;
-	cursor: pointer;
+    font-family: 'raleway', sans-serif;
+    text-transform: uppercase;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    color: #fafafa;
+    background-color: #353436;
+    font-size: 28px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 .main-form button[type=submit]:hover {
-	color: #fafafa;
-	background-color: #be2026;
-	border: 1px solid #be2026;
-	font-family: 'raleway', sans-serif;
-	text-transform: uppercase;
-	transition: all 0.35s ease-in-out;
-	-moz-transition: all 0.35s ease-in-out;
-	-webkit-transition: all 0.35s ease-in-out;
-	-o-transition: all 0.35s ease-in-out;
+    color: #fafafa;
+    background-color: #be2026;
+    border: 1px solid #be2026;
+    font-family: 'raleway', sans-serif;
+    text-transform: uppercase;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
 }
 
 .main-form .form-control {
-	font-family: 'raleway', sans-serif;
-	font-size: 16px;
-	font-weight: 100;
-	margin: 10px;
+    font-family: 'raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 100;
+    margin: 10px;
 }
 
 .main-form .form-text {
-	font-family: 'raleway', sans-serif;
-	text-transform: uppercase;
-	text-align: left;
-	font-size: 28px;
-	border: 1px solid #0d517e;
+    font-family: 'raleway', sans-serif;
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 28px;
+    border: 1px solid #0d517e;
 }
 
 .main-form {
-	padding: 60px;
-	padding-top: 100px;
-	border-radius: 5px;
-	background-color: #fafafa;
+    padding: 60px;
+    padding-top: 100px;
+    border-radius: 5px;
+
 }
 
 
 /*-----------------------------------------------------------------FIND US*/
 
 .find-me {
-	width: 100%;
-	background-color: #fafafa;
-	background-attachment: scroll;
-	background-size: cover;
-	background-position: 50% 50%;
-	margin-top: 0;
-	padding: 0;
-	height: auto;
-	margin-bottom: 100px;
+    width: 100%;
+    background-color: #fafafa;
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: 50% 50%;
+    margin-top: 0;
+    padding: 0;
+    height: auto;
+    padding-bottom: 100px;
 }
 
 .find-me h1 {
-	color: #be2026;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	font-family: 'raleway', sans-serif;
-	text-transform: uppercase;
-	text-align: center;
+    color: #be2026;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: 'raleway', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 .find-me h3 {
-	color: #be2026;
-	font-family: 'raleway', sans-serif;
-	text-transform: uppercase;
-	text-align: center;
-	padding-top: 20px;
+    color: #be2026;
+    font-family: 'raleway', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 20px;
 }
 
 .find-me p {
-	color: #111111;
-	font-family: 'satisfy', sans-serif;
-	text-align: center;
-	text-decoration: none;
+    color: #111111;
+    font-family: 'satisfy', sans-serif;
+    text-align: center;
+    text-decoration: none;
 }
 
 .find-me-container {
-	padding-top: 10px;
-	background-color: #fafafa;
-	opacity: .9;
-	width: 100%;
+    padding-top: 10px;
+    background-color: #fafafa;
+    opacity: .9;
+    width: 100%;
 }
 
 .iframe-container {
-	padding-top: 10px;
-	width: 100%;
+    padding-top: 10px;
+    width: 100%;
 }
 
 
 /*-----------------------------------------------------------------FOOTER*/
 
 footer {
-	background-color: rgba(255, 255, 255, 0.5);
-	position: fixed;
-	text-align: center;
-	width: 100%;
-	color: #906c49;
-	bottom: 0;
-	padding: 0;
-	height: auto;
+    background-color: rgba(255, 255, 255, 0.5);
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    color: #906c49;
+    bottom: 0;
+    padding: 0;
+    height: auto;
 }
 
 .social-links li a i {
-	font-size: 30px;
-	text-align: center;
-	color: #906c49;
-	transition: all 0.35s ease-in-out;
-	-moz-transition: all 0.35s ease-in-out;
-	-webkit-transition: all 0.35s ease-in-out;
-	-o-transition: all 0.35s ease-in-out;
+    font-size: 30px;
+    text-align: center;
+    color: #906c49;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
 }
 
 .social-links li a i:hover {
-	color: #353436;
+    color: #353436;
 }
 
 .footer-details {
-	padding-top: 5px;
+    padding-top: 5px;
 }
 
 
 /*-----------------------------------------------------------------MEDIA QUERIES*/
 
 @media(min-width:320px) and (max-width:991px) {
-	.navbar-brand {
-		letter-spacing: 3px;
-	}
+    .navbar-brand {
+        letter-spacing: 3px;
+    }
+}
+
+@media(min-width:320px) and (max-width:991px) {
+    .header h1 {
+        margin-top: 20px;
+    }
+}
+
+
+@media(min-width:320px) and (max-width:991px) {
+    .main-form h3 {
+        padding-top: 60px;
+        font-size: 5vw;
+    }
+}
+
+@media(min-width:320px) and (max-width:991px) {
+    .main-form p {
+        font-size: 5vw;
+    }
+}
+
+@media(min-width:320px) and (max-width:991px) {
+    .main-form {
+        padding: 5px;
+    }
 }
 
 @media(min-width: 320px) and (max-width:991px) {
-	.social-links li a i {
-		line-height: 30px;
-		width: 30px;
-		height: 30px;
-		padding: 0px;
-		border-radius: 50%;
-		font-size: 20px;
-		line-height: 30px;
-	}
+    .social-links li a i {
+        line-height: 30px;
+        width: 30px;
+        height: 30px;
+        padding: 0px;
+        border-radius: 50%;
+        font-size: 20px;
+        line-height: 30px;
+    }
 }
 
 @media(min-width: 320px) and (max-width:991px) {
-	.footer-details {
-		padding-top: 2px;
-		padding-bottom: 2px;
-	}
+    .footer-details {
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
 }
 
 @media(min-width: 320px) and (max-width:991px) {
-	footer {
-		line-height: 50px;
-		height: 50px;
-	}
+    footer {
+        line-height: 50px;
+        height: 50px;
+    }
+}
+
+
+@media(min-width: 320px) and (max-width:991px) {
+    .input-field-one {
+        width: 70%;
+    }
+}
+
+@media(min-width: 320px) and (max-width:991px) {
+    .input-field-one input #autocomplete {
+        width: 70%;
+    }
+}
+
+@media(min-width: 320px) and (max-width:991px) {
+    #mapdiv {
+        width: 93%;
+        height: 600px;
+        padding: 0;
+
+    }
+}
+
+@media(min-width: 320px) and (max-width:991px) {
+    .row {
+        margin: 0;
+    }
+}
+
+@media(min-width:320px) and (max-width:991px) {
+    .my-places h2 {
+        padding-top: 60px;
+        font-size: 5vw;
+    }
+}
+
+@media(min-width:320px) and (max-width:991px) {
+    .my-places {
+        padding-top: 0;
+
+    }
+}
+
+@media(min-width:320px) and (max-width:991px) {
+    .my-places p {
+        font-size: 5vw;
+    }
+}
+
+@media(min-width:320px) and (max-width:991px) {
+    .section-map-list {
+        width: 100%;
+        float: right;
+        padding: 9px;
+        background-color: #fafafa;
+        margin-left: 0px;
+    }
+}
+
+@media(min-width:320px) and (max-width:991px) {
+    .directions h4 {
+        font-size: 2vw;
+
+    }
+}
+
+@media(min-width:320px) and (max-width:991px) {
+    .tab-content {
+        overflow-x: auto;
+        height: 400px;
+    }
 }
