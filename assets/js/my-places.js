@@ -44,8 +44,11 @@ function addToCookie(checkbox){
     createCookie(cookieValue);
 }
 function removeFromCookie(checkbox){
+ createCookie(checkbox, "value", {
+    expires: -1
+  })
+};
 
-}
 
 
 //AM Charts JQuery Map Selection//
