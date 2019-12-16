@@ -47,6 +47,8 @@ function removeFromCookie(checkbox){
 
 }
 
+
+//AM Charts JQuery Map Selection//
 jQuery(document).ready(function () {
 
     if (document.cookie.indexOf("mapSelections") < 0) {
