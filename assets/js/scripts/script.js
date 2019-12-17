@@ -25,7 +25,7 @@ if (!username) {
 };
 
 
-//GOOGLE MAPS AUTOCOMPLETE FUNCTION WITH MAP//
+//GOOGLE MAPS AUTOCOMPLETE FUNCTION WITH MAP - ALL COMMENTS FROM GOOGLE DEVELOPERS - SEE README//
 var map, places, infoWindow;
 var markers = [];
 var autocomplete;

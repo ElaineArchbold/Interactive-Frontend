@@ -56,22 +56,8 @@ function addToCookie(checkbox){
 }
 
 function removeFromCookie(checkbox){
-   /*showAsSelected: false*/
-var val = checkbox.prop("value");
-    var cookieValue = getMyMapCookieValues();
-    if(cookieValue!==null){
-        cookieValue=val
-    }else{ 
-        if (cookieValue.includes(val) === false){
-            cookieValue = cookieValue + "," + val;
-        }
-        else {
-            initial_index = cookieValue.indexOf(val);
-            final_index = initial_index;
-        }
-        cookieValue = cookieValue + "," + val;
-    }
-    createCookie(cookieValue);
+  
+
 
 };
  
@@ -131,7 +117,7 @@ jQuery(document).ready(function () {
         map.returnInitialColor(mapObject);
 
         checkbox[0].checked = event.mapObject.showAsSelected;
-        addToCookie(checkbox);
+        addToCookie(checkbox); /*add the checkbox selection cookie to the listener*/
 
         jQuery(".section-map-list .nav-tabs [data-anchor=" + anchor + "]").tab("show");
     });
