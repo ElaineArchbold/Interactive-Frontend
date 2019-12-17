@@ -1,5 +1,7 @@
 /*MY PLACCES PAGE MAP*/
 var mapCookieValue;
+
+/* If no cookie exists, store country id on click */ 
 function inCookie(countryCode){
     var gotCode = false;
     if(mapCookieValue!=null){
@@ -17,6 +19,7 @@ function inCookie(countryCode){
     }
     return gotCode;
 }
+/* Get map cookie value from array */
 function getMyMapCookieValues(){
     var myMapCookie = "mapSelections=";
     var allCookiesAsArray = document.cookie.split(';');
@@ -26,7 +29,8 @@ function getMyMapCookieValues(){
         }
     }
     return mapCookieValue;
-}
+} 
+/* Add cookie value to array */
 function createCookie(value){
     var date = new Date();
     date.setTime(date.getTime()+(30*24*60*60*1000));
@@ -38,18 +42,40 @@ function addToCookie(checkbox){
     var cookieValue = getMyMapCookieValues();
     if(cookieValue==null||cookieValue.trim()==""){
         cookieValue=val
-    }else{
+    }else{ 
+        if (cookieValue.includes(val) === false){
+            cookieValue = cookieValue + "," + val;
+        }
+        else {
+            initial_index = cookieValue.indexOf(val);
+            final_index = initial_index;
+        }
         cookieValue = cookieValue + "," + val;
     }
     createCookie(cookieValue);
 }
+
 function removeFromCookie(checkbox){
- createCookie(checkbox, "value", {
-    expires: -1
-  })
+   /*showAsSelected: false*/
+var val = checkbox.prop("value");
+    var cookieValue = getMyMapCookieValues();
+    if(cookieValue!==null){
+        cookieValue=val
+    }else{ 
+        if (cookieValue.includes(val) === false){
+            cookieValue = cookieValue + "," + val;
+        }
+        else {
+            initial_index = cookieValue.indexOf(val);
+            final_index = initial_index;
+        }
+        cookieValue = cookieValue + "," + val;
+    }
+    createCookie(cookieValue);
+
 };
-
-
+ 
+ 
 
 //AM Charts JQuery Map Selection//
 jQuery(document).ready(function () {
@@ -105,6 +131,7 @@ jQuery(document).ready(function () {
         map.returnInitialColor(mapObject);
 
         checkbox[0].checked = event.mapObject.showAsSelected;
+        addToCookie(checkbox);
 
         jQuery(".section-map-list .nav-tabs [data-anchor=" + anchor + "]").tab("show");
     });
@@ -159,10 +186,6 @@ jQuery(".section-map-list").each(function () {
                     }).prependTo(label);
                 }
 
-
-
-
-
                 row.on("click", function (e) {
                     e.stopImmediatePropagation();
                     checkbox.prop("checked", !checkbox.prop("checked"));
@@ -184,52 +207,6 @@ jQuery(".section-map-list").each(function () {
 
     
 
-    jQuery(".section-map-list").each(function () {
-        jQuery.map(lists, function (list, name) {
-            var tbody = jQuery("#" + name).find("tbody");
-
-            jQuery(list).each(function () {
-                var CC = String(this);
-                var row = jQuery("<tr>").appendTo(tbody);
-                var col = jQuery("<td>").appendTo(row);
-                var div = jQuery("<div>").appendTo(col).addClass("checkbox");
-                var label = jQuery("<label>").appendTo(div).text(names[CC]);
-                var checkbox;
-                if(inCookie(this)){
-                    checkbox = jQuery("<input>").attr({
-                        type: "checkbox",
-                        name: "map",
-                        value: this,
-                        checked: 'checked',
-
-                    }).prependTo(label);
-                    map.updateSelection();
-                }else{
-                    checkbox = jQuery("<input>").attr({
-                        type: "checkbox",
-                        name: "map",
-                        value: this
-                    }).prependTo(label);
-                }
-
-                row.on("click", function (e) {
-                    e.stopImmediatePropagation();
-                    checkbox.prop("checked", !checkbox.prop("checked"));
-                    map.updateSelection();
-                });
-
-                checkbox.on("click", function (e) {
-                    if(checkbox.prop("checked")){
-                        addToCookie(checkbox);
-                    }else{
-                        removeFromCookie(checkbox);
-                    }
-                    e.stopImmediatePropagation();
-                    map.updateSelection();
-                });
-            });
-        });
-    });
 
 });
 

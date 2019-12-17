@@ -194,7 +194,7 @@ table {
 
 #listing {
     position: absolute;
-    width: 30%;
+    width: 100%;
     min-height: 200px;
     overflow: hidden;
     margin-bottom: 0;
@@ -229,7 +229,7 @@ table {
     border-radius: 5px;
 }
 
-.placeIcon {
+.placeIcon { 
     width: 20px;
     height: 34px;
     margin: 4px;
@@ -245,6 +245,7 @@ table {
     border-collapse: collapse;
     height: 700px;
     overflow-y: scroll;
+    margin-left:50%;
 }
 
 #rating {
@@ -597,8 +598,11 @@ footer {
         width: 93%;
         height: 600px;
         padding: 0;
-
     }
+}
+@media(min-width: 320px) and (max-width:991px) {
+#resultsTable{
+    margin-left:0;
 }
 
 @media(min-width: 320px) and (max-width:991px) {
