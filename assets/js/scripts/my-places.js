@@ -56,10 +56,22 @@ function addToCookie(checkbox){
 }
 
 function removeFromCookie(checkbox){
-  
-
-
-};
+    var val = checkbox.prop("value");
+    var cookieValue = getMyMapCookieValues();
+    var cookieValueAsArray = cookieValue.split(",");
+    var myNewCookieValue = "";
+    //keep looping while i is less then array.length//
+    for(var i = 0; i < cookieValueAsArray.length; i++){
+        if(val!= cookieValueAsArray[i]){
+            myNewCookieValue = myNewCookieValue + cookieValueAsArray[i];
+            if(i<cookieValueAsArray.length){
+                myNewCookieValue = myNewCookieValue + ",";
+            }
+        }
+    }
+    createCookie(myNewCookieValue);
+}
+ 
  
  
 
@@ -115,9 +127,11 @@ jQuery(document).ready(function () {
 
         mapObject.showAsSelected = !mapObject.showAsSelected;
         map.returnInitialColor(mapObject);
+        
 
         checkbox[0].checked = event.mapObject.showAsSelected;
         addToCookie(checkbox); /*add the checkbox selection cookie to the listener*/
+        
 
         jQuery(".section-map-list .nav-tabs [data-anchor=" + anchor + "]").tab("show");
     });
@@ -133,7 +147,7 @@ jQuery(document).ready(function () {
             });
         });
         map.dataProvider.areas = areas;
-        map.validateData();
+        map.validateData(); 
         return areas;
     }
 
@@ -170,6 +184,7 @@ jQuery(".section-map-list").each(function () {
                         name: "map",
                         value: this
                     }).prependTo(label);
+                
                 }
 
                 row.on("click", function (e) {
