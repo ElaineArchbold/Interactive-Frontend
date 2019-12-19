@@ -1,31 +1,32 @@
 //WELCOME/WELCOME BACK COOKIE//
 function getCookie(name) {
-    var setPos = document.cookie.indexOf(name + '='), stopPos = document.cookie.indexOf(';', setPos);
-    return !~setPos ? null : document.cookie.substring(
-        setPos, ~stopPos ? stopPos : undefined).split('=')[1];
+	var setPos = document.cookie.indexOf(name + '='),
+		stopPos = document.cookie.indexOf(';', setPos);
+	return !~setPos ? null : document.cookie.substring(
+		setPos, ~stopPos ? stopPos : undefined).split('=')[1];
 }
 
 function setCookie(name, val, days, path) {
-    var cookie = name + "=" +  escape(val) + "";
-    if (days) {
-        var date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        cookie += ";expires=" + date.toGMTString();
-    }
-    cookie += ";" + (path || "path=/");
-    console.log(cookie);
-    document.cookie = cookie;
+	var cookie = name + "=" + escape(val) + "";
+	if (days) {
+		var date = new Date();
+		date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+		cookie += ";expires=" + date.toGMTString();
+	}
+	cookie += ";" + (path || "path=/");
+	console.log(cookie);
+	document.cookie = cookie;
 }
 
 var username = getCookie("username");
 if (!username) {
-    setCookie("username", prompt("Welcome! Please enter your name to save your travel selections"), 365);
+	setCookie("username", prompt("Welcome! Please enter your name to save your travel selections"), 365);
 } else {
-    alert("Welcome Back " + username + "!");
-};
+	alert("Welcome Back " + username + "!");
+}
 
 
-//GOOGLE MAPS AUTOCOMPLETE FUNCTION WITH MAP - ALL COMMENTS FROM GOOGLE DEVELOPERS - SEE README//
+//GOOGLE MAPS AUTOCOMPLETE FUNCTION WITH MAP - ALL CODE & COMMENTS FROM GOOGLE DEVELOPERS - SEE README//
 var map, places, infoWindow;
 var markers = [];
 var autocomplete;
@@ -342,5 +343,4 @@ function buildIWContent(place) {
 	} else {
 		document.getElementById('iw-website-row').style.display = 'none';
 	}
-};
-
+}

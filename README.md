@@ -31,19 +31,19 @@ CONTACT PAGE – There is a contact form on the contact page, created with Email
 
 
 ## Technologies Used
-1. HTML
+1. HTML 
 2. CSS
 3. Bootstrap (4)
 4. JavaScript
 5. Google Places API
 6. EmailJS
 7. JQuery
-8. Photoshop
+8. Photoshop 
 9. Illustrator
 
 
 ## Testing
-The site has been tested for responsiveness on Chrome, Safari and Firefox.
+The site has been tested for responsiveness on Chrome, Safari and Firefox. I have used several media queries to resize images and divs for different screen sizes, making the site more user friendly.
 
 All HTML was checked on the W3C Mark-up Validation Service.
 
@@ -51,21 +51,22 @@ The CSS was checked on the W3C CSS Validation Service.
 
 All HTML was formatted on https://freeformatter.com.
 
-All links have been tested.
+The script files have passed through jshint.com with no major issues.
 
-The contact form has been tested and is working correctly.
+All links have been tested:
+On the contact page, you receive an error if the form fields are not entered correctly.
 
 Screenshots of the responsive design can be seen here:
 
 ![Desktop View1](assets/images/design.jpg)
 
 ## Deployment
-The site has been deployed to GitHub pages and can be viewed here: https://elainearchbold.github.io/Interactive-Frontend/
+The IDE I used was GitPod, and the site has been deployed to GitHub pages. It can be viewed here: https://elainearchbold.github.io/Interactive-Frontend/
 
 ## Credits
 ### Content
 I followed the Google Places API instructions from the Google API tutorial (https://developers.google.com/places/web-service/autocomplete). This was added to and styled for use on 'Index.html'.
-I used AM Charts interactive map (https://www.amcharts.com/visited_countries/#) for the 'My Places' page and styled this to suit the theme. I also added to their JavaScript to create custom cookies to store the user selections. 
+I used AM Charts interactive map (https://www.amcharts.com/visited_countries/#) for the 'My Places' page and styled this to suit the theme. I also added my own JavaScript functions to theirs to create custom cookies to store the user selections. 
 
 
 ### Media
