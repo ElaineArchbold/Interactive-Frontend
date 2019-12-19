@@ -14,11 +14,11 @@ My goal in the design was to create a clean and simple look, with the main secti
 
 I kept the Navbar and footer simple, going for a bootstrap light theme to ensure the hamburger Navbar menu icon would still be visible across each page.
 
-###User A – Wants to search for hotels in a certain location. On the ‘Home’ page (index.html) there is a search bar linked to a Google Map. The user simply selects the country, enters in the city and the map will populate with markers showing hotels in the vicinity. It also shows the hotels in a list in order of distance from the marker. This is fully interactive and pulls details on each hotel as you hover or click over a marker.
+### User A – Wants to search for hotels in a certain location. On the ‘Home’ page (index.html) there is a search bar linked to a Google Map. The user simply selects the country, enters in the city and the map will populate with markers showing hotels in the vicinity. It also shows the hotels in a list in order of distance from the marker. This is fully interactive and pulls details on each hotel as you hover or click over a marker.
 
-###User B – Wants to select and store all of the places they have been, to have a visual representation on a map of how far they have travelled. On the ‘My Places’ page, the map is fully interactive. The user can click an area on the map or select the location on the list and this country is selected and changes colour. I have written cookies to store these details so that everything will remain the same the next time the user visits the site.
+### User B – Wants to select and store all of the places they have been, to have a visual representation on a map of how far they have travelled. On the ‘My Places’ page, the map is fully interactive. The user can click an area on the map or select the location on the list and this country is selected and changes colour. I have written cookies to store these details so that everything will remain the same the next time the user visits the site.
 
-###User C – Wants to get in touch with a query. On the ‘Contact’ page, I have an interactive form using EmailJS, as well as contact details and a Google Map iframe showing the location of the business.
+### User C – Wants to get in touch with a query. On the ‘Contact’ page, I have an interactive form using EmailJS, as well as contact details and a Google Map iframe showing the location of the business.
 
 ## Features
 ### Existing Features
