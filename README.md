@@ -14,20 +14,20 @@ My goal in the design was to create a clean and simple look, with the main secti
 
 I kept the Navbar and footer simple, going for a bootstrap light theme to ensure the hamburger Navbar menu icon would still be visible across each page.
 
-### User A – Wants to search for hotels in a certain location. On the ‘Home’ page (index.html) there is a search bar linked to a Google Map. The user simply selects the country, enters in the city and the map will populate with markers showing hotels in the vicinity. It also shows the hotels in a list in order of distance from the marker. This is fully interactive and pulls details on each hotel as you hover or click over a marker.
+User A – Wants to search for hotels in a certain location. On the ‘Home’ page (index.html) there is a search bar linked to a Google Map. The user simply selects the country, enters in the city and the map will populate with markers showing hotels in the vicinity. It also shows the hotels in a list in order of distance from the marker. This is fully interactive and pulls details on each hotel as you hover or click over a marker.
 
-### User B – Wants to select and store all of the places they have been, to have a visual representation on a map of how far they have travelled. On the ‘My Places’ page, the map is fully interactive. The user can click an area on the map or select the location on the list and this country is selected and changes colour. I have written cookies to store these details so that everything will remain the same the next time the user visits the site.
+User B – Wants to select and store all of the places they have been, to have a visual representation on a map of how far they have travelled. On the ‘My Places’ page, the map is fully interactive. The user can click an area on the map or select the location on the list and this country is selected and changes colour. I have written cookies to store these details so that everything will remain the same the next time the user visits the site.
 
-### User C – Wants to get in touch with a query. On the ‘Contact’ page, I have an interactive form using EmailJS, as well as contact details and a Google Map iframe showing the location of the business.
+User C – Wants to get in touch with a query. On the ‘Contact’ page, I have an interactive form using EmailJS, as well as contact details and a Google Map iframe showing the location of the business.
 
 ## Features
 ### Existing Features
 HOME PAGE – I have set a welcome/welcome back cookie storing the users name to either welcome or welcome them back to the site. 
-There is a Google Map & search bar which I have linked in with the Google Place API id fields. The user can enter a location and nearby hotels will populate into the map my way of a marker. A list is also populated alongside the map and the user can click on either the marker or the list to find more information on that particular hotel.
+There is a Google Map & search bar which I have linked in with the Google Place API id fields. The user can enter a location and nearby hotels will populate into the map by way of a marker. A list is also populated alongside the map and the user can click on either the marker or the list to find more information on that particular hotel.
 
-PLACES VISITED PAGE - I have an interactive 'Places Visited' map on the 'My Places' page with cookies to store the users selected locations. The user can either click on the map or select a country from the list to add it to their selection. Once selected, the country changes colour. The user can immediately see how much of the world they have visited, and how much more travelling they have yet to do.
+PLACES VISITED PAGE - I have an interactive 'Places Visited' map on the 'My Places' page with cookies to store the users selected locations. The user can either click on the map or select a country from the list to add it to their selection. Once selected, the country changes colour. The user can immediately see how much of the world they have visited, and how much more travelling they have yet to do. To remove it from their selection, the user highlights the country and deselects it from the list of countries.
 
-CONTACT PAGE – There is a contact form on the contact page, created with EmailJS. The parameters have been set and it has been tested to ensure it is working correctly. 
+CONTACT PAGE – There is a contact form on the contact page, created with EmailJS. The parameters have been set and it has been tested to ensure it is working correctly. The form will not work if any details are missing.
 
 
 ## Technologies Used
@@ -55,6 +55,7 @@ The script files have passed through jshint.com with no major issues.
 
 All links have been tested:
 On the contact page, you receive an error if the form fields are not entered correctly.
+
 
 Screenshots of the responsive design can be seen here:
 
